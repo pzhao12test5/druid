@@ -85,7 +85,7 @@
     <gib.commitRange>${env.TRAVIS_COMMIT_RANGE}</gib.commitRange>
         <gib.enabled>true</gib.enabled>
         <gib.useEkstazi>true</gib.useEkstazi>
-        <gib.excludePathRegex>(.*\.txt$)|(.*\.md$)|(.*\.html$)|(.*\.rst$)|(.*\.scss$)|(.*\.css$)|(.*\.png$)|(.*\.py$)|(.*README$)|(.*\.jpg$)|(.*\.jpeg$)|(.*NOTICE$)|(.*\.gitignore$)</gib.excludePathRegex>
+        <gib.excludePathRegex>(.*\.apt$)|(.*\.txt$)|(.*\.md$)|(.*\.html$)|(.*\.rst$)|(.*\.scss$)|(.*\.css$)|(.*\.png$)|(.*\.py$)|(.*README$)|(.*\.jpg$)|(.*\.jpeg$)|(.*NOTICE$)|(.*\.gitignore$)</gib.excludePathRegex>
     </properties>
 
     <modules>
@@ -643,12 +643,6 @@
                 <artifactId>hadoop-client</artifactId>
                 <version>${hadoop.compile.version}</version>
                 <scope>provided</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.avro</groupId>
-                        <artifactId>avro</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.mapdb</groupId>
